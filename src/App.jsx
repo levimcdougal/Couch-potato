@@ -21,7 +21,7 @@ import './App.css'
 const locations = {
   indiana: {
     label: 'Indiana',
-    city: 'Indianapolis and surrounding areas',
+    city: 'Indiana',
     phone: '(765) 278-2922',
   },
   arizona: {
@@ -34,7 +34,7 @@ const locations = {
 const serviceGroups = [
   {
     title: 'Residential Cleaning',
-    text: 'Recurring home cleaning for busy households. We keep your space fresh on a schedule that works for you.',
+    text: 'Recurring home cleaning with the same familiar cleaner every visit. Consistent, detail-focused, and built around your schedule.',
     image: houseImg,
     items: [
       'Weekly service',
@@ -46,7 +46,7 @@ const serviceGroups = [
   },
   {
     title: 'Deep Cleans',
-    text: 'A thorough top-to-bottom clean for homes that need more than a routine refresh.',
+    text: 'A thorough top-to-bottom clean done by a solo or duo cleaner who takes the time to get every detail right.',
     image: vacImg,
     items: [
       'Full kitchen detail',
@@ -82,7 +82,7 @@ const serviceGroups = [
   },
   {
     title: 'Airbnb & Short-Term Rentals',
-    text: 'Turnover cleaning built for fast resets, fresh presentation, and guest-ready details.',
+    text: 'Turnover cleaning done with the same care and attention your guests deserve — fast resets, fresh presentation, guest-ready every time.',
     image: mopImg,
     items: [
       'Guest turnover cleans',
@@ -93,7 +93,7 @@ const serviceGroups = [
   },
   {
     title: 'Commercial Cleaning',
-    text: 'Clean, consistent workspaces for offices, shops, studios, and shared facilities.',
+    text: 'Clean, consistent workspaces kept by the same cleaner who knows your space — offices, shops, studios, and shared facilities.',
     image: officeImg,
     items: [
       'Office cleaning',
@@ -276,9 +276,8 @@ function HomePage({ selectedLocation, goTo }) {
           <p className="eyebrow">Professional Cleaning Services</p>
           <h1>Refresh your home or office without leaving the couch.</h1>
           <p className="hero-copy">
-            Residential, short-term rental, and commercial cleaning for customers in
-            {` ${selectedLocation.label}`}. Choose your location and request a clean that
-            fits your schedule.
+            Residential, short-term rental, and commercial cleaning with a personal touch.
+            Solo and duo cleaners — more attention to detail, consistency, and care in every clean.
           </p>
           <div className="hero-actions">
             <button type="button" onClick={() => goTo('services')}>
@@ -300,15 +299,15 @@ function HomePage({ selectedLocation, goTo }) {
           <p className="eyebrow">About Us</p>
           <h2>We clean so you can relax.</h2>
           <p>
-            From recurring maintenance to deep detail work, Couch Potato Cleaning keeps
-            the process simple: select your location, choose the service type, and tell
-            us what needs attention, we handle everything from there.
+            At Couch Potato Cleaning, you get a solo or duo cleaner — the same familiar face,
+            the same high standard, and someone who actually knows your home.
+            More attention to detail, consistency, and care in every clean.
           </p>
           <p>
-            We serve homeowners, renters, Airbnb hosts, and business owners across Indiana
-            and Arizona. Whether you need a quick weekly refresh or a full deep clean before
-            a move, our team shows up on time, does the job right, and leaves your space
-            better than we found it, every single visit.
+            We serve homeowners, renters, Airbnb hosts, and business owners. Whether you
+            need a quick weekly refresh or a full deep clean before a move, your cleaner
+            shows up on time, does the job right, and leaves your space better than we
+            found it, every single visit.
           </p>
           <button type="button" onClick={() => goTo('services')}>
             View What We Clean
@@ -371,7 +370,7 @@ function ServicesPage({ selectedLocation, location, setLocation, goTo }) {
       <PageHero
         eyebrow="Services"
         title="Cleaning services built around homes, rentals, and businesses."
-        text={`Now viewing service options for ${selectedLocation.city}.`}
+        text="Solo and duo cleaners — more attention to detail, consistency, and care in every clean."
         className="page-hero-services"
         showLogo
       />
@@ -400,7 +399,7 @@ function ServicesPage({ selectedLocation, location, setLocation, goTo }) {
           <div className="hiw-step">
             <span className="hiw-number">1</span>
             <h3>Choose your location</h3>
-            <p>Select Indiana or Arizona to connect with the right local team for your area.</p>
+            <p>Select Indiana or Arizona to connect with your local solo or duo cleaner.</p>
           </div>
           <div className="hiw-step">
             <span className="hiw-number">2</span>
@@ -442,7 +441,7 @@ const faqs = [
   },
   {
     q: 'What areas do you serve?',
-    a: 'We currently serve Indianapolis and surrounding areas in Indiana, and Phoenix, Scottsdale, Mesa, and nearby communities in Arizona.',
+    a: 'We currently serve Indiana and Phoenix, Scottsdale, Mesa, and nearby communities in Arizona.',
   },
 ]
 
@@ -462,7 +461,7 @@ function ContactPage() {
           <div className="booking-card">
             <div className="booking-card-header">
               <h3>Book a cleaning service in Indiana</h3>
-              <span>Serving Indianapolis and surrounding areas</span>
+              <span>Serving Indiana</span>
             </div>
             <iframe
               src="https://cal.com/couchpotatocleaning?embed=true"
@@ -474,7 +473,7 @@ function ContactPage() {
           <div className="booking-card">
             <div className="booking-card-header">
               <h3>Book a cleaning service in Arizona</h3>
-              <span>Serving Phoenix, Scottsdale, Mesa, and nearby communities</span>
+              <span>Serving Arizona</span>
             </div>
             <iframe
               src="https://cal.com/couchpotatocleaningarizona?embed=true"
