@@ -658,6 +658,13 @@ p {
   font-size: 14px;
 }
 
+.cal-embed {
+  width: 100%;
+  min-height: 560px;
+  border: none;
+  border-radius: 0 0 28px 28px;
+}
+
 .cal-placeholder {
   display: flex;
   align-items: center;
@@ -1035,10 +1042,11 @@ p {
 }
 
 @media (max-width: 900px) {
-  .topbar,
-  .location-chooser {
+  .topbar {
     align-items: flex-start;
     flex-direction: column;
+    gap: 10px;
+    padding: 12px clamp(16px, 5vw, 64px);
   }
 
   .nav-links {
@@ -1051,7 +1059,8 @@ p {
   }
 
   .hero-section {
-    min-height: 560px;
+    min-height: 480px;
+    padding: 100px clamp(20px, 5vw, 60px) 80px;
   }
 
   .intro-band,
@@ -1063,12 +1072,12 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .quick-services {
-    gap: 10px;
-  }
-
   .hiw-steps {
     grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer-main {
@@ -1076,22 +1085,41 @@ p {
   }
 
   .footer-bottom {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 
-  .location-chooser.compact {
-    margin-inline: 20px;
+  .page-hero {
+    padding: 110px clamp(20px, 5vw, 60px) 60px;
   }
 
-  .experience-card {
-    right: 18px;
+  .page-hero-layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .page-hero-logo {
+    width: clamp(120px, 30vw, 200px);
+    transform: none;
+  }
+
+  .services-new-grid {
+    padding: 40px clamp(20px, 5vw, 60px) 60px;
+  }
+
+  .booking-section,
+  .direct-contact-section,
+  .faq-section,
+  .reviews-section,
+  .how-it-works {
+    padding: 60px clamp(20px, 5vw, 60px);
   }
 }
 
 @media (max-width: 620px) {
   .topbar {
-    gap: 12px;
+    gap: 8px;
   }
 
   .brand {
@@ -1099,47 +1127,136 @@ p {
   }
 
   .nav-links {
-    gap: 6px;
+    gap: 4px;
   }
 
   .nav-links button {
     flex: 1;
-    padding-inline: 8px;
+    padding-inline: 6px;
+    font-size: 13px;
   }
 
-  .hero-section h1,
+  .estimate-button {
+    font-size: 14px;
+  }
+
+  .hero-section {
+    min-height: 420px;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
   .page-hero h1 {
-    font-size: 40px;
+    font-size: clamp(28px, 7vw, 42px);
   }
 
-  .hero-actions,
-  .location-buttons,
-  .contact-form {
+  .hero-copy {
+    font-size: 15px;
+  }
+
+  .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
   }
 
-  .hero-actions button,
-  .location-buttons button {
+  .hero-actions button {
     width: 100%;
   }
 
-  .photo-stack {
-    min-height: 380px;
+  .hero-trust {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .photo-card {
-    min-height: 340px;
+  .intro-band {
+    padding: 60px 20px 50px;
+    text-align: center;
   }
 
-  .experience-card {
-    width: auto;
-    left: 18px;
+  .intro-copy h2 {
+    font-size: clamp(28px, 7vw, 40px);
   }
 
+  .intro-copy button {
+    width: 100%;
+  }
+
+  .service-strip {
+    padding: 50px 20px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-new-grid {
+    grid-template-columns: 1fr;
+    padding: 30px 20px 50px;
+    gap: 20px;
+  }
+
+  .service-item {
+    padding: 24px;
+  }
+
+  .service-item-img {
+    max-height: 140px;
+  }
+
+  .hiw-steps {
+    gap: 32px;
+  }
+
+  .booking-grid,
+  .direct-contact-grid,
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-section,
+  .direct-contact-section,
+  .faq-section,
+  .reviews-section,
+  .how-it-works {
+    padding: 50px 20px;
+  }
+
+  .booking-section h2,
+  .direct-contact-section h2,
+  .faq-section h2,
+  .reviews-section h2,
+  .how-it-works h2 {
+    font-size: clamp(26px, 6vw, 36px);
+  }
+
+  .cal-embed {
+    min-height: 460px;
+  }
 
   .footer-main {
     grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 20px;
+  }
+
+  .footer-brand img {
+    transform: scale(1.3) translateY(3px);
+  }
+
+  .work-gallery {
+    padding: 50px 0 80px;
+  }
+
+  .page-hero-layout {
+    align-items: flex-start;
+  }
+
+  .page-hero-logo {
+    width: 120px;
+    transform: none;
   }
 }

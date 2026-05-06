@@ -453,22 +453,24 @@ function ContactPage() {
               <h3>Book a cleaning service in Indiana</h3>
               <span>Serving Indianapolis and surrounding areas</span>
             </div>
-            <div className="cal-placeholder">
-              <div className="cal-placeholder-inner">
-                <p>Online booking coming soon.</p>
-              </div>
-            </div>
+            <iframe
+              src="https://cal.com/couchpotatocleaning?embed=true"
+              className="cal-embed"
+              frameBorder="0"
+              title="Book Indiana"
+            />
           </div>
           <div className="booking-card">
             <div className="booking-card-header">
               <h3>Book a cleaning service in Arizona</h3>
               <span>Serving Phoenix, Scottsdale, Mesa, and nearby communities</span>
             </div>
-            <div className="cal-placeholder">
-              <div className="cal-placeholder-inner">
-                <p>Online booking coming soon.</p>
-              </div>
-            </div>
+            <iframe
+              src="https://cal.com/couchpotatocleaningarizona?embed=true"
+              className="cal-embed"
+              frameBorder="0"
+              title="Book Arizona"
+            />
           </div>
         </div>
       </section>
