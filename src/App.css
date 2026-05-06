@@ -1062,7 +1062,11 @@ p {
   height: 3px;
   background: var(--ink);
   border-radius: 999px;
-  transition: background 0.2s;
+}
+
+.topbar-transparent .hamburger {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
 
 .topbar-transparent .hamburger span {
@@ -1096,13 +1100,13 @@ p {
     top: 58px;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 999;
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
+    gap: 4px;
     padding: 16px 20px 24px;
     background: #ffffff;
-    box-shadow: 0 8px 24px rgba(247, 37, 133, 0.15);
+    box-shadow: 0 8px 24px rgba(247, 37, 133, 0.2);
   }
 
   .nav-links.nav-open {
@@ -1231,7 +1235,7 @@ p {
   }
 
   .page-hero-logo {
-    width: 140px;
+    width: 220px;
     transform: none;
   }
 
