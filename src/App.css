@@ -1119,6 +1119,19 @@ p {
     text-align: left;
     font-size: 16px;
     border-radius: 12px;
+    color: var(--ink) !important;
+  }
+
+  .nav-links button.active {
+    color: #ffffff !important;
+  }
+
+  .topbar-transparent .nav-links.nav-open button {
+    color: var(--ink) !important;
+  }
+
+  .topbar-transparent .nav-links.nav-open button.active {
+    color: #ffffff !important;
   }
 
   .nav-mobile-cta {
