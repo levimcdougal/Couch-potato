@@ -22,7 +22,7 @@ const locations = {
   indiana: {
     label: 'Indiana',
     city: 'Indianapolis and surrounding areas',
-    phone: '(123) 456-7890',
+    phone: '(765) 278-2922',
   },
   arizona: {
     label: 'Arizona',
@@ -151,6 +151,7 @@ function App() {
   const [page, setPage] = useState('home')
   const [location, setLocation] = useState('indiana')
   const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const selectedLocation = locations[location]
 
   useEffect(() => {
@@ -166,6 +167,7 @@ function App() {
 
   const goTo = (nextPage) => {
     setPage(nextPage)
+    setMenuOpen(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -178,7 +180,7 @@ function App() {
           <img src={logo} alt="Couch Potato Cleaning" />
         </button>
 
-        <nav className="nav-links" aria-label="Main navigation">
+        <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`} aria-label="Main navigation">
           {['home', 'services', 'contact'].map((item) => (
             <button
               key={item}
@@ -189,10 +191,19 @@ function App() {
               {item}
             </button>
           ))}
+          <button className="estimate-button nav-mobile-cta" type="button" onClick={() => goTo('contact')}>
+            Request an Estimate
+          </button>
         </nav>
 
-        <button className="estimate-button" type="button" onClick={() => goTo('contact')}>
+        <button className="estimate-button nav-desktop-cta" type="button" onClick={() => goTo('contact')}>
           Request an Estimate
+        </button>
+
+        <button className="hamburger" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </header>
 
@@ -243,8 +254,8 @@ function App() {
 
           <div className="footer-column">
             <h2>Contact</h2>
-            <a href="mailto:hello@couchpotatocleaning.com">hello@couchpotatocleaning.com</a>
-            <a href="tel:1234567890">(123) 456-7890 — Indiana</a>
+            <a href="mailto:couchpotatocleaning@gmail.com">couchpotatocleaning@gmail.com</a>
+            <a href="tel:7652782922">(765) 278-2922 — Indiana</a>
             <a href="tel:7652782922">(765) 278-2922 — Arizona</a>
           </div>
         </div>
@@ -484,15 +495,15 @@ function ContactPage() {
             <div className="direct-contact-rows">
               <div>
                 <span>Phone</span>
-                <a href="tel:1234567890">(123) 456-7890</a>
+                <a href="tel:7652782922">(765) 278-2922</a>
               </div>
               <div>
                 <span>Text</span>
-                <a href="sms:1234567890">(123) 456-7890</a>
+                <a href="sms:7652782922">(765) 278-2922</a>
               </div>
               <div>
                 <span>Email</span>
-                <a href="mailto:hello@couchpotatocleaning.com">hello@couchpotatocleaning.com</a>
+                <a href="mailto:couchpotatocleaning@gmail.com">couchpotatocleaning@gmail.com</a>
               </div>
             </div>
           </div>
@@ -509,7 +520,7 @@ function ContactPage() {
               </div>
               <div>
                 <span>Email</span>
-                <a href="mailto:hello@couchpotatocleaning.com">hello@couchpotatocleaning.com</a>
+                <a href="mailto:couchpotatocleaning@gmail.com">couchpotatocleaning@gmail.com</a>
               </div>
             </div>
           </div>
